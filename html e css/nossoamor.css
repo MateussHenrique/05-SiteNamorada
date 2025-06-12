@@ -424,3 +424,89 @@ body {
   html {
     scroll-behavior: smooth;
   }
+
+  .next-section-arrow {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .arrow-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #ff4b8d;
+  }
+
+  .arrow-link:hover {
+    transform: translateX(5px);
+    background: #ff4b8d;
+  }
+
+  .arrow {
+    font-size: 24px;
+    color: #ff4b8d;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .arrow-text {
+    font-family: 'Dancing Script', cursive;
+    color: #ff4b8d;
+    font-size: 18px;
+    white-space: nowrap;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width 0.3s ease, margin-right 0.3s ease;
+  }
+
+  .arrow-link:hover .arrow-text {
+    max-width: 200px;
+    margin-right: 10px;
+  }
+
+  .arrow-link:hover .arrow {
+    color: white;
+  }
+
+  .arrow-link:hover .arrow-text {
+    color: white;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+  }
+
+  .arrow {
+    animation: bounce 2s infinite;
+  }
+
+  /* Ajuste para telas menores */
+  @media (max-width: 768px) {
+    .next-section-arrow {
+        right: 15px;
+    }
+
+    .arrow-link {
+        padding: 10px;
+    }
+
+    .arrow {
+        font-size: 20px;
+    }
+
+    .arrow-text {
+        font-size: 16px;
+    }
+  }

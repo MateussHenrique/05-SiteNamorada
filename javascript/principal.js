@@ -53,6 +53,25 @@ function revealPhoto() {
     }
 }
 
+// Função para controlar a visibilidade da seta
+function handleArrowVisibility() {
+    const arrow = document.querySelector('.next-section-arrow');
+    const loveStorySection = document.querySelector('.love-story-section');
+    const timelineSection = document.querySelector('.timeline-section');
+    
+    if (!arrow || !loveStorySection || !timelineSection) return;
+
+    const storyRect = loveStorySection.getBoundingClientRect();
+    const timelineRect = timelineSection.getBoundingClientRect();
+
+    // Mostra a seta apenas quando estamos na seção de fotos E a timeline não está visível
+    const isInStorySection = storyRect.top <= 0 && storyRect.bottom >= 0;
+    const isTimelineVisible = timelineRect.top <= window.innerHeight && timelineRect.bottom >= 0;
+
+    arrow.style.opacity = (isInStorySection && !isTimelineVisible) ? '1' : '0';
+    arrow.style.visibility = (isInStorySection && !isTimelineVisible) ? 'visible' : 'hidden';
+}
+
 // Inicializa todas as funcionalidades quando o documento estiver pronto
 document.addEventListener('DOMContentLoaded', function() {
     // Inicia o contador
@@ -62,6 +81,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Configura a rolagem suave
     setupSmoothScroll();
+
+    // Adiciona o controle de visibilidade da seta
+    window.addEventListener('scroll', handleArrowVisibility);
+    handleArrowVisibility(); // Checa a visibilidade inicial
 });
 
 // Torna a função revealPhoto global para o onclick funcionar
