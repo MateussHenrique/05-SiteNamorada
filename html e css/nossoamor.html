@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amo Você</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nossoamor.css">
+</head>
+<body>
+    <section class="hero-section">
+        <header>💘 Para minha namorada 💘</header>
+        
+        <div class="relationship-counter">
+            <div class="counter-title">Juntos há:</div>
+            <div class="counter-values">
+                <div class="counter-item">
+                    <span id="days">0</span>
+                    <span class="label">Dias</span>
+                </div>
+                <div class="counter-item">
+                    <span id="hours">0</span>
+                    <span class="label">Horas</span>
+                </div>
+                <div class="counter-item">
+                    <span id="minutes">0</span>
+                    <span class="label">Minutos</span>
+                </div>
+                <div class="counter-item">
+                    <span id="seconds">0</span>
+                    <span class="label">Segundos</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-button-container">
+            <a href="#our-names" class="scroll-button">Ver nossa história ❤️</a>
+        </div>
+    </section>
+
+    <section class="love-story-section">
+        <div class="names" id="our-names">Mateus & Letícia</div>
+
+        <div class="gallery" id="gallery">
+            <img src="imagens/imagem2.jpg" alt="Nós dois">
+            <img src="imagens/imagem1.jpg" alt="Nós dois">
+            <img src="imagens/imagem4.jpg" alt="Nós dois">
+            <img src="imagens/imagem3.jpg" alt="Nós dois">
+            <img src="imagens/imagem5.jpg" alt="Nós dois">
+            <img src="imagens/imagem9.jpg" alt="Nós dois">
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <h2 class="timeline-title">Nossa Linha do Tempo</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">❤️</div>
+                <div class="timeline-content">
+                    <h3>Nos conhecemos</h3>
+                    <p class="timeline-date">15 de Setembro, 2024</p>
+                    <p class="timeline-text">O destino nos uniu e nossos olhares se cruzaram pela primeira vez</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">📅</div>
+                <div class="timeline-content">
+                    <h3>Primeiro encontro</h3>
+                    <p class="timeline-date">20 de Setembro, 2024</p>
+                    <p class="timeline-text">Uma noite especial que ficará para sempre em nossos corações</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">💋</div>
+                <div class="timeline-content">
+                    <h3>Nosso primeiro beijo</h3>
+                    <p class="timeline-date">25 de Setembro, 2024</p>
+                    <p class="timeline-text">O momento mágico que selou nosso amor</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">💍</div>
+                <div class="timeline-content">
+                    <h3>Pedido de namoro</h3>
+                    <p class="timeline-date">29 de Setembro, 2024</p>
+                    <p class="timeline-text">O dia em que oficialmente começamos nossa história de amor</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">🚗</div>
+                <div class="timeline-content">
+                    <h3>Nossa primeira viagem</h3>
+                    <p class="timeline-date">15 de Outubro, 2024</p>
+                    <p class="timeline-text">Nossa primeira aventura juntos, criando memórias inesquecíveis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="messages-section">
+        <div class="love-message">
+            Cada momento ao seu lado é um presente que a vida me deu, e eu sou eternamente grato por te ter como minha. Você é a razão do meu sorriso, a calma nos meus dias turbulentos e a alegria que ilumina o meu coração. Eu te amo mais do que palavras podem expressar.
+        </div>
+
+        <div class="phrases" id="lovePhrase">"O amor é a poesia dos sentidos." ❤️</div>
+
+        <div class="heart" onclick="revealPhoto()">❤️</div>
+        <div id="hidden-photo">
+            <p>🌟 Nossa primeira foto juntos:</p>
+            <img src="imagens/Imagem5.jpg" alt="Primeira Foto">
+        </div>
+
+        <div class="timer" id="relationshipTimer"></div>
+
+        <div class="anniversary-date">❤ Desde 29/09/2024 ❤</div>
+    </section>
+
+    <script src="../javascript/principal.js"></script>
+</body>
+</html>
