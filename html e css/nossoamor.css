@@ -510,3 +510,308 @@ body {
         font-size: 16px;
     }
   }
+
+  /* Estilos para a seção de cards de amor */
+  .love-cards-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+    position: relative;
+  }
+
+  .love-cards-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  }
+
+  .section-title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: #ff4b8d;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .love-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .love-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: all 0.3s ease;
+    border: 2px solid #ff8fb1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  .love-card:nth-child(1) { animation-delay: 0.2s; }
+  .love-card:nth-child(2) { animation-delay: 0.4s; }
+  .love-card:nth-child(3) { animation-delay: 0.6s; }
+  .love-card:nth-child(4) { animation-delay: 0.8s; }
+  .love-card:nth-child(5) { animation-delay: 1.0s; }
+  .love-card:nth-child(6) { animation-delay: 1.2s; }
+
+  .love-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(255, 75, 141, 0.2);
+    border-color: #ff4b8d;
+  }
+
+  .card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .card-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #ff4b8d;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .love-cards-container {
+        gap: 20px;
+    }
+
+    .love-card {
+        width: calc(100% - 40px);
+        max-width: 300px;
+    }
+  }
+
+  /* Estilos para a seção interativa do coração */
+  .interactive-heart-section {
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .heart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heart {
+    font-size: 120px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 1.5s infinite;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .heart:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+  }
+
+  .heart-content {
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    transition: all 0.5s ease;
+    border: 2px solid #ff8fb1;
+    transform: translateY(-20px);
+    margin-top: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .heart-content.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    margin-top: 30px;
+    height: auto;
+    padding: 30px;
+  }
+
+  .heart-message {
+    margin-bottom: 20px;
+  }
+
+  .heart-message p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    color: #ff4b8d;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .heart-photo {
+    margin-top: 20px;
+  }
+
+  .heart-photo img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .heart-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 75, 141, 0.2);
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* Estilos do Rodapé */
+  .footer {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    padding: 40px 0;
+    margin-top: 50px;
+    box-shadow: 0 -5px 15px rgba(255, 20, 147, 0.2);
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .footer-message {
+    margin-bottom: 30px;
+  }
+
+  .footer-message p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .social-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+
+  .social-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .social-button i {
+    font-size: 1.5rem;
+  }
+
+  .credits {
+    color: white;
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  .credits p {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+  }
+
+  .heart-icon {
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+  }
+
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  /* Responsividade do Rodapé */
+  @media (max-width: 768px) {
+    .footer-message p {
+        font-size: 2rem;
+    }
+
+    .social-buttons {
+        gap: 15px;
+    }
+
+    .social-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .social-button i {
+        font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-message p {
+        font-size: 1.8rem;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-button {
+        width: 80%;
+        justify-content: center;
+    }
+  }

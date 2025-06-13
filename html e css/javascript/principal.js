@@ -9,6 +9,13 @@ function updateTimer() {
   const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
+  // Atualiza o contador visual no topo
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+
+  // Atualiza o texto do contador
   document.getElementById("relationshipTimer").innerText =
     `Estamos juntos há: ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos 💞`;
 }
@@ -31,20 +38,14 @@ function rotatePhrase() {
   document.getElementById("lovePhrase").innerText = phrases[phraseIndex];
 }
 
-setInterval(rotatePhrase, 3000); // Troca a cada 3 segundos
+setInterval(rotatePhrase, 3000); 
 
-// MOSTRAR A PRIMEIRA FOTO
-function revealPhoto() {
-  const hiddenPhoto = document.getElementById("hidden-photo");
-  if (hiddenPhoto.style.display === "block") {
-    hiddenPhoto.style.opacity = "0";
-    setTimeout(() => {
-      hiddenPhoto.style.display = "none";
-    }, 500);
-  } else {
-    hiddenPhoto.style.display = "block";
-    setTimeout(() => {
-      hiddenPhoto.style.opacity = "1";
-    }, 10);
-  }
+
+function revealHeartContent() {
+    const heartContent = document.getElementById("heart-content");
+    if (heartContent.classList.contains("active")) {
+        heartContent.classList.remove("active");
+    } else {
+        heartContent.classList.add("active");
+    }
 }

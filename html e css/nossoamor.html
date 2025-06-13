@@ -53,7 +53,6 @@
         <div class="next-section-arrow">
             <a href="#timeline" class="arrow-link">
                 <span class="arrow">➜</span>
-                <span class="arrow-text">Nossa Linha do Tempo</span>
             </a>
         </div>
     </section>
@@ -108,6 +107,36 @@
         </div>
     </section>
 
+    <section class="love-cards-section">
+        <h2 class="section-title">Por que eu amo você</h2>
+        <div class="love-cards-container">
+            <div class="love-card">
+                <div class="card-icon">💘</div>
+                <p class="card-text">"Seu abraço é meu lar"</p>
+            </div>
+            <div class="love-card">
+                <div class="card-icon">🌹</div>
+                <p class="card-text">"Você me inspira a ser melhor"</p>
+            </div>
+            <div class="love-card">
+                <div class="card-icon">💬</div>
+                <p class="card-text">"Te amo por tudo que somos"</p>
+            </div>
+            <div class="love-card">
+                <div class="card-icon">💞</div>
+                <p class="card-text">"Seu sorriso ilumina meu dia"</p>
+            </div>
+            <div class="love-card">
+                <div class="card-icon">🌟</div>
+                <p class="card-text">"Você acredita em mim até quando eu duvido"</p>
+            </div>
+            <div class="love-card">
+                <div class="card-icon">💖</div>
+                <p class="card-text">"Seu jeito me encanta todos os dias"</p>
+            </div>
+        </div>
+    </section>
+
     <section class="messages-section">
         <div class="love-message">
             Cada momento ao seu lado é um presente que a vida me deu, e eu sou eternamente grato por te ter como minha. Você é a razão do meu sorriso, a calma nos meus dias turbulentos e a alegria que ilumina o meu coração. Eu te amo mais do que palavras podem expressar.
@@ -115,17 +144,51 @@
 
         <div class="phrases" id="lovePhrase">"O amor é a poesia dos sentidos." ❤️</div>
 
-        <div class="heart" onclick="revealPhoto()">❤️</div>
-        <div id="hidden-photo">
-            <p>🌟 Nossa primeira foto juntos:</p>
-            <img src="imagens/Imagem5.jpg" alt="Primeira Foto">
+        <div class="interactive-heart-section">
+            <h2 class="section-title">Coração Clicável</h2>
+            <div class="heart-container">
+                <div class="heart" onclick="revealHeartContent()">❤️</div>
+                <div id="heart-content" class="heart-content">
+                    <div class="heart-message">
+                        <p>Nossa primeira foto juntos marcou o início de uma história linda de amor. Cada momento ao seu lado é um presente que guardo com carinho no meu coração. Você é a razão do meu sorriso e a inspiração dos meus dias. Te amo infinitamente! 💖</p>
+                    </div>
+                    <div class="heart-photo">
+                        <img src="imagens/imagem10.jpg" alt="Nossa primeira foto juntos">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="timer" id="relationshipTimer"></div>
-
-        <div class="anniversary-date">❤ Desde 29/09/2024 ❤</div>
     </section>
 
-    <script src="../javascript/principal.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-message">
+                <p>"Prometo te amar mais a cada dia ❤️"</p>
+            </div>
+            
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/seu_instagram" target="_blank" class="social-button">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://open.spotify.com/user/seu_spotify" target="_blank" class="social-button">
+                    <i class="fab fa-spotify"></i>
+                    <span>Spotify</span>
+                </a>
+                <a href="https://wa.me/seu_numero" target="_blank" class="social-button">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="credits">
+                <p>Feito com <span class="heart-icon">❤️</span> por Mateus Henrique</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <script src="javascript/principal.js"></script>
 </body>
 </html>
